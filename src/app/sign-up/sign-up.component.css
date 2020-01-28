@@ -1,0 +1,24 @@
+mat-form-field
+{
+    width:43%;
+    margin-left: 70px;
+    margin-bottom: 20px;
+}
+
+mat-card
+{
+    margin:20px;
+    background-color:rgb(193, 231, 188);
+}
+h2{
+    text-align: center;
+    font-weight: bolder;
+    color:rebeccapurple;
+}
+
+button{
+    margin-left: 700px;
+    background-color: rgb(219, 168, 163);
+    padding: 10px;
+    font-weight:bolder;
+}

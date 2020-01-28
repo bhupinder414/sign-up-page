@@ -1,0 +1,44 @@
+<form (submit)="onSubmit(SignUpForm)" #SignUpForm="ngForm">
+    <mat-card>
+        <mat-label>
+            <h2>SIGN UP</h2>
+        </mat-label>
+        <mat-form-field floatLabel="auto" appearance="fill" color="accent" hideRequiredMarker>
+            <mat-label>First Name</mat-label>
+            <input matInput minlength="2" maxlength="20" type="text" required #firstname="ngModel" ngModel name="FirstName">
+              <mat-error *ngIf="firstname.invalid">Enter valid name</mat-error>
+        </mat-form-field>
+        <mat-form-field floatLabel="auto" appearance="fill" color="accent" hideRequiredMarker>
+            <mat-label>Last Name</mat-label>
+            <input matInput minlength="2" maxlength="20" type="text" required #lastname="ngModel" ngModel name="LastName">
+              <mat-error *ngIf="lastname.invalid">Enter valid name</mat-error>
+        </mat-form-field>
+        <mat-form-field floatLabel="auto" appearance="fill" color="accent" hideRequiredMarker>
+            <mat-label>DOB</mat-label>
+            <input matInput  type="date" required #dob="ngModel" ngModel name="DOB">
+              <mat-error *ngIf="dob.invalid">Enter valid Date</mat-error>
+        </mat-form-field>
+        <mat-form-field floatLabel="auto" appearance="fill" color="accent" hideRequiredMarker>
+            <mat-label>Mobile Number</mat-label>
+            <input matInput minlength="10"  type="text" pattern="[0-9]{10}" required #mobileNo="ngModel" ngModel name="MobileNumber">
+            <mat-error *ngIf="mobileNo.invalid">Enter valid number</mat-error>
+         </mat-form-field>
+        <mat-form-field floatLabel="auto" appearance="fill" color="accent" hideRequiredMarker>
+           <mat-label>Email ID</mat-label>
+           <input matInput minlength="8"  type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required #email="ngModel" ngModel name="Email">
+             <mat-error *ngIf="email.invalid">Enter valid Email</mat-error>
+        </mat-form-field>
+        <mat-form-field floatLabel="auto" appearance="fill" color="accent" hideRequiredMarker>
+           <mat-label>Alternate Email ID</mat-label>
+           <input matInput minlength="8"  type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required #alternateEmail="ngModel" ngModel name="AlternateEmail">
+             <mat-error *ngIf="alternateEmail.invalid">Enter valid name</mat-error>
+        </mat-form-field>
+       
+        <mat-form-field floatLabel="auto" appearance="fill" color="accent" hideRequiredMarker>
+           <mat-label>Address</mat-label>
+           <textarea matInput minlength="20"  type="text" required #address="ngModel" ngModel name="Address"></textarea>
+           <mat-error *ngIf="address.invalid">Enter valid Address</mat-error>
+        </mat-form-field><br>
+        <button mat-raised-Button color="accent" type="submit">Submit</button>
+    </mat-card>
+</form>
